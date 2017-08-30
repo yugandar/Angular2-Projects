@@ -1,0 +1,33 @@
+h1{
+  color: green;
+}
+
+table,td,th{
+  border: 2px solid red;
+  border-collapse:collapse ;
+}
+table{
+  width: 80%;
+  background-color: aqua;
+}
+.myImg{
+  width: 30%;
+}
+
+.myCourse{
+  color: red;
+  background-color: yellow;
+}
+.par1{
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.even{
+  font-size: 20px;
+  color: red;
+}
+.odd{
+  font-size: 20px;
+  color: green;
+}

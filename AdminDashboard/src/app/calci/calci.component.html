@@ -1,0 +1,17 @@
+<div>
+  Enter No1:<input type="number" [(ngModel)]="no1">
+</div>
+<div>
+  Enter No2:<input type="number" [(ngModel)]="no2">
+</div>
+<div>Rsult:{{result}}</div>
+<div>
+  <button (click)="add(no1,no2)">Add</button>
+</div>
+{{emp|json}}
+<div>
+  <li *ngFor="let e of emp">{{e.name}} {{e.id}}</li>
+
+
+  <h1>My company::{{cname}}</h1>
+</div>

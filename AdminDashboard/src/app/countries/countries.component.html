@@ -1,0 +1,18 @@
+
+Search:<input type="search" [(ngModel)]="countryname">
+<button class="btn btn-success" (click)="getCountries(countryname)">Display</button>
+<div *ngIf="isTrue1">{{errMsg}}</div>
+<div *ngIf="isTrue">
+<table class="table table-bordered">
+  <tr>
+    <th>Name</th>
+    <th>capital</th>
+    <th>flag</th>
+  </tr>
+  <tr *ngFor="let countries of listOfCountries">
+<td>{{countries.name}}</td>
+<td>{{countries.capital}}</td>
+<td><img src="{{countries.flag}}" width="20px" ></td>
+  </tr>
+</table>
+</div>

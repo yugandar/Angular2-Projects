@@ -1,0 +1,261 @@
+
+<!--
+<h1>MyCompany:{{cname}}</h1>
+<app-calci [cname]="cname"></app-calci>
+-->
+
+<!--
+<h1>parent data</h1>
+{{students}}
+
+<h1>{{name}}</h1>
+<input type="search" [(ngModel)]="search" name="search">
+
+<table>
+<tr *ngFor="let emp of students |search:search; ">
+  <td>{{emp}}</td>
+</tr>
+
+</table>
+
+<app-child [students]="students" [name]="name"></app-child>
+-->
+<!--
+
+&lt;!&ndash;
+<h1>{{myName}}</h1>
+<h1>{{myName|uppercase}}</h1>
+<h1>{{myName|Capatalize}}</h1>
+
+
+<h1>{{Cname}}</h1>
+<h1>{{Cname|lowercase}}</h1>
+<h1>{{amount}}</h1>
+<h1>{{amount|currency:'INR':true}}</h1>
+<h1>{{amount|number:'2.3-7'}}</h1>
+<h1>{{avg}}</h1>
+<h1>{{avg|percent}}</h1>
+<h1>{{today}}</h1>
+<h1>{{today|date:'dd/MM/yyyy'}}</h1>
+<h1>{{today|date:'dd/MMMM/yyyy'}}</h1>
+<h1>{{today|date:'h:m:a'}}</h1>
+<h1>{{today|date:short}}</h1>
+<h1>{{today|date:'fullDate'}}</h1>
+
+<h1>mYcourse:{{mYcourse}}</h1>
+<h1>mYcourse:{{mYcourse|Capatalize}}</h1>
+&ndash;&gt;
+
+<hr>
+<h2>Jspiders Employees Data</h2>
+<input type="search" [(ngModel)]="search" name="search">
+<table>
+  <tr>
+    <th>Slno</th>
+    <th>Name</th>
+    <th>Id</th>
+    <th>Salary</th>
+  </tr>
+  <tr *ngFor="let emp of Employee;let i=index ">
+    <td>{{i+1}}</td>
+    <td>{{emp.name|search:search}}</td>
+    <td>{{emp.id}}</td>
+    <td>{{emp.salary}}</td>
+
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+&lt;!&ndash;
+<app-header></app-header>
+
+&lt;!&ndash;<img src="../assets/download.jpg">&ndash;&gt;
+
+<div>
+  <h2 class="myCourse" myBackground>AngularJs-2 Developers</h2>
+  <h2 [ngClass]="{myCourse:false,par1:true}">AngularJs-2 Developers</h2>
+</div>
+<div *ngFor="let num of data">
+  <div ngSwitch="{{num%2}}">
+    <div *ngSwitchCase="'0'" [ngClass]="'even'" >{{num}}: Even</div>
+    <div *ngSwitchCase="'1'" [ngClass]="'odd'" >{{num}}:odd</div>
+
+  </div>
+
+</div>
+
+<div style="color: blue">Inline Demo</div>
+<div [ngStyle]="{'color': 'blue','font-size':'80px'}">java developers</div>
+
+<div myBackground>developers</div>
+
+<i myBackground >hello developers</i>
+
+Aggree T/c<input type="checkbox" [(ngModel)]="isTrue">
+<div *ngIf="isTrue">
+  <h1>Am a angularjs Developers</h1>
+  <input type="button" value="Next">
+</div>
+
+&lt;!&ndash;<div>
+  <li *ngFor="let d of data">
+    <div *ngIf="d%2==0">
+      <h1>{{d}}Even</h1>
+    </div>
+  </li>
+</div>&ndash;&gt;
+
+<div *ngIf="a;else b">
+  <h2 myBackground>true block is executed</h2>
+</div>
+<ng-template #b>am from else block</ng-template>
+
+
+<h2>ngSWITCH DEMO</h2>
+select Course:
+&lt;!&ndash;<select [(ngModel)]="course">
+  <option>-select-</option>
+  <option  >java</option>
+  <option >css</option>
+  <option >angularjs</option>
+</select>&ndash;&gt;
+<select [(ngModel)]="course">
+  <option>{{course}}</option>
+  <option *ngFor="let c of courses" value="{{c}}">{{c}}</option>
+</select>
+
+
+
+
+
+<div [ngSwitch]="course">
+  <h2 *ngSwitchCase="'css'">css developers</h2>
+  <h2 *ngSwitchCase="'java'">java developers</h2>
+  <h2 *ngSwitchCase="'ang'">angularjs developers</h2>
+  <h2 *ngSwitchDefault>select any course</h2>
+</div>
+
+
+
+
+
+
+
+
+<br><br><br><br>
+<img class="myImg" [src]="myUrl">
+<div>
+  <button (click)="display()">Display Name</button>
+{{myname}}
+</div>
+<div>
+  Enter Name:<input type="text"  [(ngModel)]="user" >{{user}}
+</div>
+
+<div>
+  Calci App
+  <div>
+    Enter No1:<input type="number" [(ngModel)]="no1">
+  </div>
+  <div>
+    Enter No2:<input type="number" [(ngModel)]="no2">
+  </div>
+  <button (click)="add(no1,no2)">Add</button>
+<h1>Total:{{result}}</h1>
+</div>
+
+
+
+
+
+
+<h1>MyName:{{name}}</h1>
+<h1>MyPlace:{{myPlace}}</h1>
+<h1>Id:{{id}}</h1>
+
+<OL>
+  <li *ngFor="let s of students">{{s}}</li>
+</OL>
+
+<div>
+  {{Employee|json}}
+</div>
+
+&lt;!&ndash;
+<div>Name:{{Employee.name}}</div>
+<div>Id:{{Employee.id}}</div>
+<div>Salary:{{Employee.salary}}</div>
+
+&ndash;&gt;
+
+<h2>Jspiders Employees Data</h2>
+<table>
+  <tr>
+    <th>Slno</th>
+    <th>Name</th>
+    <th>Id</th>
+    <th>Salary</th>
+  </tr>
+  <tr *ngFor="let emp of Employee;let i=index ">
+    <td>{{i+1}}</td>
+    <td>{{emp.name}}</td>
+    <td>{{emp.id}}</td>
+    <td>{{emp.salary}}</td>
+
+  </tr>
+</table>
+<app-footer></app-footer>
+
+
+<br><br><br><br><br><br><br><br><br>
+&ndash;&gt;
+-->
+<!--
+{{message}}
+<app-child (datago)="reciveMsg($event)"></app-child>
+-->
+<!--
+<app-child (sendName)="reciveData($event)"></app-child>
+<hr>
+<h3>Parent Page</h3>
+{{reciveName}}
+-->
+<app-nav></app-nav>
+
+<label>Select Country:</label>
+<select class="form-control" [(ngModel)]="course">
+  <option>-select-</option>
+  <option  >java</option>
+  <option >css</option>
+  <option >angularjs</option>
+</select>
+<select [(ngModel)]="course">
+  <option>{{course}}</option>
+  <option *ngFor="let c of courses" value="{{c}}">{{c}}</option>
+</select>
+
+
+
+
+
+<div [ngSwitch]="course">
+  <h2 *ngSwitchCase="'css'">css developers</h2>
+  <h2 *ngSwitchCase="'java'">java developers</h2>
+  <h2 *ngSwitchCase="'ang'">angularjs developers</h2>
+  <h2 *ngSwitchDefault>select any course</h2>
+</div>
+
+
+
+<app-countries></app-countries>
